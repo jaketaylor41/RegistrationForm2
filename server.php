@@ -1,38 +1,26 @@
 <?php
-$cleardb_url      = parse_url(getenv("CLEARDB_DATABASE_URL"));
-$cleardb_server   = $cleardb_url["us-cdbr-iron-east-01.cleardb.net"];
-$cleardb_username = $cleardb_url["b68e314c37d579"];
-$cleardb_password = $cleardb_url["980c8efd"];
-$cleardb_db       = substr($cleardb_url["heroku_61e6cc90a4490bb"],1);
-$active_group = 'default';
-$query_builder = TRUE;
-$db['default'] = array(
-    'dsn'   => '',
-    'hostname' => $cleardb_server,
-    'username' => $cleardb_username,
-    'password' => $cleardb_password,
-    'database' => $cleardb_db,
-    'dbdriver' => 'mysqli',
-    'dbprefix' => '',
-    'pconnect' => FALSE,
-    'db_debug' => (ENVIRONMENT !== 'production'),
-    'cache_on' => FALSE,
-    'cachedir' => '',
-    'char_set' => 'utf8',
-    'dbcollat' => 'utf8_general_ci',
-    'swap_pre' => '',
-    'encrypt' => FALSE,
-    'compress' => FALSE,
-    'stricton' => FALSE,
-    'failover' => array(),
-    'save_queries' => TRUE
-);
+$url = getenv('JAWSDB_URL');
+$dbparts = parse_url($url);
+
+$hostname = $dbparts['bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	'];
+$username = $dbparts['c6yha5d7xaec2saa'];
+$password = $dbparts['mmz42r0bv1ukt52b'];
+$database = ltrim($dbparts['ecdupp1z6rgjtuqa'],'/');
+
+
+
+
+
 // Create connection
-$connection = new mysqli($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+$conn = new mysqli($hostname, $username, $password, $database);
+
 // Check connection
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+echo "Connection was successfully established!";
+
+
 $errors = array();
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
