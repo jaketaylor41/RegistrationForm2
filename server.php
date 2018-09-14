@@ -84,5 +84,5 @@ $sql_statement = "INSERT INTO `users` (`id`, `fName`, `lName`, `email`, `confirm
 //        mysqli_query($link, $query);
 //        $_SESSION['username'] = $personUsername;
 //        $_SESSION['success'] = "You are now logged in";
-        header('location: home.php');
+//        header('location: home.php');
 //    }

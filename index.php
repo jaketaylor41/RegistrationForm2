@@ -43,7 +43,7 @@
 
             <!-- Form -->
             <form class="text-center" style="color: #757575;" action="server.php">
-                <?php include('errors.php'); ?>
+<!--                --><?php //include('errors.php'); ?>
                 <div class="form-row">
                     <div class="col">
                         <!-- First name -->
