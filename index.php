@@ -42,7 +42,7 @@
         <div class="card-body px-lg-5 pt-0">
 
             <!-- Form -->
-            <form class="text-center" style="color: #757575;" method="post" action="index.php">
+            <form class="text-center" style="color: #757575;" action="server.php">
                 <?php include('errors.php'); ?>
                 <div class="form-row">
                     <div class="col">
