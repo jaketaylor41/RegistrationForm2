@@ -18,7 +18,7 @@ $conn = mysqli_connect($hostname, $username, $password, $database);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Connection was successfully established!";
+//echo "Connection was successfully established!";
 
 $personName = $_POST['fNameInput'];
 $personLname = $_POST['lNameInput'];

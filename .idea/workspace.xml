@@ -64,10 +64,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="2" column="75" selection-start-line="2" selection-start-column="75" selection-end-line="2" selection-end-column="75" />
+            <state relative-caret-position="184">
+              <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
               <folding>
-                <marker date="1537225139000" expanded="true" signature="4484:4513" ph="..." />
+                <marker date="1537228436000" expanded="true" signature="4486:4515" ph="..." />
               </folding>
             </state>
           </provider>
@@ -76,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
+            <state relative-caret-position="-54">
               <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
@@ -165,12 +165,12 @@
       <option name="presentableId" value="Default" />
       <updated>1536678239292</updated>
       <workItem from="1536678240620" duration="13173000" />
-      <workItem from="1536714836636" duration="10379000" />
+      <workItem from="1536714836636" duration="10514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23552000" />
+    <option name="totallyTimeSpent" value="23687000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="28" y="23" width="1193" height="655" extended-state="0" />
@@ -225,6 +225,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -232,19 +239,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" column="75" selection-start-line="2" selection-start-column="75" selection-end-line="2" selection-end-column="75" />
+        <state relative-caret-position="184">
+          <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
           <folding>
-            <marker date="1537225139000" expanded="true" signature="4484:4513" ph="..." />
+            <marker date="1537228436000" expanded="true" signature="4486:4515" ph="..." />
           </folding>
         </state>
       </provider>
