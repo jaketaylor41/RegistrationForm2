@@ -18,14 +18,14 @@ if ($link->connect_error) {
 }
 echo "Connection was successfully established!";
 
-$personName = $_GET['fNameInput'];
-$personLname = $_GET['lNameInput'];
-$personEmail = $_GET['emailInput'];
-$personConfirmEmail = $_GET['confirmEmail'];
-$personBirthday = $_GET['dobInput'];
-$personUsername = $_GET['usernameInput'];
-$personPassword = $_GET['passwordInput'];
-$personConfirmPassword = $_GET['confirmPassword'];
+$personName = $_POST['fNameInput'];
+$personLname = $_POST['lNameInput'];
+$personEmail = $_POST['emailInput'];
+$personConfirmEmail = $_POST['confirmEmail'];
+$personBirthday = $_POST['dobInput'];
+$personUsername = $_POST['usernameInput'];
+$personPassword = $_POST['passwordInput'];
+$personConfirmPassword = $_POST['confirmPassword'];
 
 
 $sql_statement = "INSERT INTO `users` (`id`, `fName`, `lName`, `email`, `confirmEmail`, `birthday`, `username`, `password`, `confirmPassword`) VALUES (NULL, '$personName', '$personLname', '$personEmail', '$personConfirmEmail', '$personBirthday', '$personUsername', '$personPassword', '$personConfirmPassword')";
