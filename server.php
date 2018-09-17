@@ -8,6 +8,11 @@ $username = $dbparts['c6yha5d7xaec2saa'];
 $password = $dbparts['mmz42r0bv1ukt52b'];
 $database = ltrim($dbparts['ecdupp1z6rgjtuqa'],'/');
 
+//$hostname = "localhost:8889";
+//$username = "root";
+//$password = "root";
+//$database = "heroku";
+
 
 // Create connection
 $link = mysqli_connect($hostname, $username, $password, $database);
