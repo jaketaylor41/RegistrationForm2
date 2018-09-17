@@ -41,7 +41,7 @@
         <div class="card-body px-lg-5 pt-0">
 
             <!-- Form -->
-            <form class="text-center" style="color: #757575;" action="home.php" method="post">
+            <form class="text-center" style="color: #757575;" action="server.php" method="post">
 <!--                --><?php //include('errors.php'); ?>
                 <div class="form-row">
                     <div class="col">

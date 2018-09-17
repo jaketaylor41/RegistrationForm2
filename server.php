@@ -1,12 +1,9 @@
 <?php
 
-$url = getenv('JAWSDB_URL');
-$dbparts = parse_url($url);
-
-$hostname = $dbparts['bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'];
-$username = $dbparts['c6yha5d7xaec2saa'];
-$password = $dbparts['mmz42r0bv1ukt52b'];
-$database = ltrim($dbparts['ecdupp1z6rgjtuqa'],'/');
+$hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+$username = "c6yha5d7xaec2saa";
+$password = "mmz42r0bv1ukt52b";
+$database = "ecdupp1z6rgjtuqa";
 
 //$hostname = "localhost:8889";
 //$username = "root";
@@ -15,11 +12,11 @@ $database = ltrim($dbparts['ecdupp1z6rgjtuqa'],'/');
 
 
 // Create connection
-$link = mysqli_connect($hostname, $username, $password, $database);
+$conn = mysqli_connect($hostname, $username, $password, $database);
 
 // Check connection
-if ($link->connect_error) {
-    die("Connection failed: " . $link->connect_error);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 echo "Connection was successfully established!";
 
@@ -37,6 +34,16 @@ $sql_statement = "INSERT INTO `users` (`id`, `fName`, `lName`, `email`, `confirm
 
 
 
+if($conn->query($sql_statement) == TRUE){
+
+    include "home.php";
+
+} else{
+
+    echo "Error " . $sql_statement . "<br>" . $conn->error;
+}
+
+$conn->close();
 
 
 
