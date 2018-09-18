@@ -60,6 +60,7 @@
 <!-- Material form register -->
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
+    <div class="modal-content">
     <div class="card">
 
         <h5 class="card-header info-color white-text text-center py-4">
@@ -129,6 +130,7 @@
         </div>
 
     </div>
+    </div>
 </div>
 </div>
 <!-- Material form register -->
@@ -142,6 +144,7 @@
 <div id="myModal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
     <div class="modal-dialog">
+    <div class="modal-content">
     <div class="card">
 
         <h5 class="card-header info-color white-text text-center py-4">
@@ -175,6 +178,7 @@
 
         </div>
 
+    </div>
     </div>
     </div>
 </div>
