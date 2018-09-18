@@ -78,12 +78,12 @@
 </head>
 <body>
 <div class="header">
-    <a class="navbar-brand" href="#">The Blog</a>
+    <a class="navbar-brand" href="#">Alpha Blog</a>
     <input id="homeSearch" class="form-control form-control-sm mr-sm-2 mb-0" type="text" placeholder="Search" aria-label="Search">
 </div>
 
 <div class="welcomeButtons">
-    <p class="blogTitle">The Blog</p>
+    <p class="blogTitle">Alpha Blog</p>
 <button data-toggle="modal" data-target="#myModal" id="signUpBtn" type="button" class="btn btn-primary waves-effect ">Sign Up</button><br>
 <button data-toggle="modal" data-target="#myModal2" id="loginBtn" type="button" class="btn waves-effect">Log in</button>
 </div>
