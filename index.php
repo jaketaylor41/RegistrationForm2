@@ -47,6 +47,10 @@
         margin-bottom: 50px;
     }
 
+    .modal-content{
+        display: block;
+    }
+
 </style>
 </head>
 <body>
