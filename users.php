@@ -25,7 +25,7 @@ $personEmail = $_POST['emailInput'];
 $personPassword = $_POST['passwordInput'];
 
 
-$sql_statement = "SELECT * FROM `users` WHERE email = '$personEmail', password = '$personPassword'";
+$sql_statement = "SELECT * FROM `users` WHERE password = '$personPassword'";
 
 
 
