@@ -14,12 +14,13 @@
 
     body{
         /*background-image: linear-gradient(to right, #11998e , #38ef7d);*/
-        background-image: url("images/abstract.jpeg");
+        background-image: url("images/background.jpg");
+        background-size: 100%;
     }
 
     .welcomeButtons{
         text-align: center;
-        margin-top: 15%;
+        margin-top: 10%;
     }
 
     .welcomeButtons button{
@@ -38,6 +39,7 @@
         margin-bottom: 50px;
         font-family: Impact;
         font-size: 50px;
+        color: #000000;
     }
 
     .card{
@@ -51,9 +53,34 @@
         display: block;
     }
 
+    #homeSearch{
+        width: 30%;
+        background: rgba(0, 0, 0, .13);
+        display: inline-block;
+    }
+
+    #homeSearch:focus{
+        transition: background 75ms,color 75ms;
+        color: #000000;
+        background: #ffffff;
+
+
+
+    }
+
+    .navbar-brand{
+        padding-left: 10px;
+        color: #000000;
+    }
+    
+
 </style>
 </head>
 <body>
+<div class="header">
+    <a class="navbar-brand" href="#">The Blog</a>
+    <input id="homeSearch" class="form-control form-control-sm mr-sm-2 mb-0" type="text" placeholder="Search" aria-label="Search">
+</div>
 
 <div class="welcomeButtons">
     <p class="blogTitle">The Blog</p>
@@ -103,7 +130,7 @@
 
                 <!-- DOB -->
                 <div class="md-form">
-                    <input type="date" name="dobInput" class="form-control" placeholder="Birthday">
+                    <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="dobInput" class="form-control" placeholder="Birthday">
                 </div>
 
                 <!-- Username -->
@@ -123,9 +150,9 @@
 
                 <!-- Sign up button -->
                 <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" name="reg_user">Register</button>
-                <div class="loginLink">
-                    <a href="login.php">Already a User? Log in Now</a>
-                </div>
+<!--                <div class="loginLink">-->
+<!--                    <a data-target="#myModal2" data-toggle="modal" href="#myModal2">Already a User? Log in Now</a>-->
+<!--                </div>-->
 
 
             </form>
@@ -156,7 +183,7 @@
         </h5>
 
         <!--Card content-->
-        <div class="card-body px-lg-5 pt-0">
+        <div class="card-body px-lg-5 pt-0" style="margin-top: 20px;">
 
             <!-- Form -->
             <form class="text-center" style="color: #757575;" action="users.php" method="post">
@@ -172,9 +199,9 @@
                 </div>
                 <!-- Log In button -->
                 <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" name="log_user">Log In</button>
-                <div class="registerLink">
-                    <a href="register.php">Not a user? Sign Up Now</a>
-                </div>
+<!--                <div class="registerLink">-->
+<!--                    <a href="register.php">Not a user? Sign Up Now</a>-->
+<!--                </div>-->
 
 
             </form>
@@ -187,6 +214,9 @@
     </div>
 </div>
 <!-- Material form register -->
+
+
+
 
 
 
