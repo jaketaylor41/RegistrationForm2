@@ -72,6 +72,17 @@
         padding-left: 10px;
         color: #000000;
     }
+
+    .login-error {
+        background-color: #f1f1f1; 
+        box-shadow: 0 3px 5px rgba(0,0,0,0.25);
+        color: red; 
+        height: 24px; 
+        left: 0; 
+        position: fixed; 
+        right: 0; 
+        text-align: center; 
+    }
     
 
 </style>

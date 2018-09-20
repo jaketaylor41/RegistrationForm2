@@ -5,11 +5,15 @@
 //$password = "mmz42r0bv1ukt52b";
 //$database = "ecdupp1z6rgjtuqa";
 
-$hostname = "localhost:8889";
+//$hostname = "localhost:8889";
+//$username = "root";
+//$password = "root";
+//$database = "heroku";
+
+$hostname = "localhost";
 $username = "root";
 $password = "root";
-$database = "heroku";
-
+$database = "form-demo"; 
 
 // Create connection
 $conn = mysqli_connect($hostname, $username, $password, $database);
@@ -30,7 +34,7 @@ $personPassword = $_POST['passwordInput'];
 $personConfirmPassword = $_POST['confirmPassword'];
 
 
-$sql_statement = "INSERT INTO `users` (`id`, `fName`, `lName`, `email`, `confirmEmail`, `birthday`, `username`, `password`, `confirmPassword`) VALUES (NULL, '$personName', '$personLname', '$personEmail', '$personConfirmEmail', '$personBirthday', '$personUsername', '$personPassword', '$personConfirmPassword')";
+$sql_statement = "INSERT INTO `users` (`id`, `fName`, `lName`, `email`, `birthday`, `username`, `password`) VALUES (NULL, '$personName', '$personLname', '$personEmail', '$personBirthday', '$personUsername', '$personPassword')";
 
 
 
