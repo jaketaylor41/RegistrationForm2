@@ -6,10 +6,11 @@
 //$database = "ecdupp1z6rgjtuqa";
 
 //declare database variables
-$hostname = "localhost";
+//isaiah's personal database
+/* $hostname = "localhost";
 $username = "root";
 $password = "root";
-$database = "form-demo";
+$database = "form-demo"; */
 
 //establish db connect
 $conn = new mysqli($hostname, $username, $password, $database);

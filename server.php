@@ -10,10 +10,11 @@
 //$password = "root";
 //$database = "heroku";
 
+/* isaiah's local database
 $hostname = "localhost";
 $username = "root";
 $password = "root";
-$database = "form-demo"; 
+$database = "form-demo";  */
 
 // Create connection
 $conn = mysqli_connect($hostname, $username, $password, $database);
