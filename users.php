@@ -5,39 +5,42 @@
 //$password = "mmz42r0bv1ukt52b";
 //$database = "ecdupp1z6rgjtuqa";
 
-$hostname = "localhost:8889";
+//declare database variables
+//isaiah's personal database
+/* $hostname = "localhost";
 $username = "root";
 $password = "root";
-$database = "heroku";
+$database = "form-demo"; */
 
+//establish db connect
+$conn = new mysqli($hostname, $username, $password, $database);
 
-// Create connection
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-//echo "Connection was successfully established!";
-
-
+//declare local variables from form submission
 $personEmail = $_POST['emailInput'];
 $personPassword = $_POST['passwordInput'];
 
+//define SQL query
+$sql_statement = "SELECT password FROM users WHERE email = '".$personEmail."' AND password = '".$personPassword."'";
 
-$sql_statement = "SELECT * FROM `users` WHERE password = '$personPassword'";
-
-
-
-
-
-if($conn->query($sql_statement) == TRUE){
-
-    include "home.php";
-
-} else{
-
-    echo "Error " . $sql_statement . "<br>" . $conn->error;
+//check connection
+if ($conn->connect_errno) {
+    printf("Connect failed: %s\n", $conn->connect_error);
+    exit();
 }
 
+//declare results and check if null
+if ($result = $conn->query($sql_statement)) {
+    //update header if a match is greater than zero
+    if ($result->num_rows > 0){
+        header("Location: home.php");
+    }
+    else {
+        echo '<div class="login-error">incorrect login</div>';
+        include("index.php");
+        //header("Location: index.php");
+    }
+    die();
+}
+
+//close db connect
 $conn->close();
