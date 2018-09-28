@@ -101,11 +101,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="60" column="1" lean-forward="true" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+            <state relative-caret-position="-148">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
-                <element signature="e#7#86#0#PHP" expanded="true" />
-                <marker date="1538094033000" expanded="true" signature="5207:5236" ph="..." />
+                <marker date="1538094276000" expanded="true" signature="5199:5228" ph="..." />
               </folding>
             </state>
           </provider>
@@ -217,18 +216,18 @@
       <option name="presentableId" value="Default" />
       <updated>1536678239292</updated>
       <workItem from="1536678240620" duration="13173000" />
-      <workItem from="1536714836636" duration="40587000" />
+      <workItem from="1536714836636" duration="40830000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53760000" />
+    <option name="totallyTimeSpent" value="54003000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1193" height="655" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27280626" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27280626" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -241,7 +240,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.36412078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.36412078" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -324,11 +323,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="60" column="1" lean-forward="true" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+        <state relative-caret-position="-148">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#7#86#0#PHP" expanded="true" />
-            <marker date="1538094033000" expanded="true" signature="5207:5236" ph="..." />
+            <marker date="1538094276000" expanded="true" signature="5199:5228" ph="..." />
           </folding>
         </state>
       </provider>

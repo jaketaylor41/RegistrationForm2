@@ -11,10 +11,10 @@
 
 <?php
 
-//$hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
-//$username = "c6yha5d7xaec2saa";
-//$password = "mmz42r0bv1ukt52b";
-//$database = "ecdupp1z6rgjtuqa";
+$hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
+$username = "c6yha5d7xaec2saa";
+$password = "mmz42r0bv1ukt52b";
+$database = "ecdupp1z6rgjtuqa";
 
 //$hostname = "localhost:8889";
 //$username = "root";
