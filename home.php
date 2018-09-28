@@ -20,7 +20,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <style>
         body{
-            background-image: linear-gradient(to right, #43cea2, #185a9d);
+            /*background-image: linear-gradient(to right, #43cea2, #185a9d);*/
         }
         p{
             width: 80%;
