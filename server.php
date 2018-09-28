@@ -53,6 +53,7 @@ $sql_statement = "INSERT INTO `users` (`id`, `fName`, `lName`, `email`, `birthda
 if($conn->query($sql_statement) == TRUE){
 
     include "home.php";
+    header("Location: home.php");
 
 } else{
 
