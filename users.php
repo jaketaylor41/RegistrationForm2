@@ -20,16 +20,16 @@
 
 //declare database variables
 //isaiah's personal database
-/* $hostname = "localhost";
-$username = "root";
-$password = "root";
-$database = "form-demo"; */
-
-//jake's local database
 $hostname = "localhost";
 $username = "root";
 $password = "root";
-$database = "heroku";
+$database = "form-demo";
+
+//jake's local database
+/* $hostname = "localhost";
+$username = "root";
+$password = "root";
+$database = "heroku"; */
 
 //establish db connect
 $conn = new mysqli($hostname, $username, $password, $database);

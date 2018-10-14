@@ -16,16 +16,16 @@
 //$password = "mmz42r0bv1ukt52b";
 //$database = "ecdupp1z6rgjtuqa";
 
-$hostname = "localhost:8889";
+/* $hostname = "localhost:8889";
 $username = "root";
 $password = "root";
-$database = "heroku";
+$database = "heroku"; */
 
-/* isaiah's local database
+// isaiah's local database
 $hostname = "localhost";
 $username = "root";
 $password = "root";
-$database = "form-demo";  */
+$database = "form-demo"; 
 
 // Create connection
 $conn = mysqli_connect($hostname, $username, $password, $database);
@@ -50,13 +50,11 @@ $sql_statement = "INSERT INTO `users` (`id`, `fName`, `lName`, `email`, `birthda
 
 
 
-if($conn->query($sql_statement) == TRUE){
-
+if($result = $conn->query($sql_statement) == TRUE){
     include "home.php";
     header("Location: home.php");
-
-} else{
-
+} 
+else {
     echo "Error " . $sql_statement . "<br>" . $conn->error;
 }
 

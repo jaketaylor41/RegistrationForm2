@@ -67,8 +67,6 @@
     </div>
 
 
-    <?php include 'posts.php';?>
-
 
 
     <!-- Section: Blog v.3 -->
@@ -78,43 +76,48 @@
         <h2 class="h1-responsive font-weight-bold text-center my-5">Recent Posts</h2>
         <!-- Section description -->
         <p class="text-center dark-grey-text w-responsive mx-auto mb-5">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+        <?php
+            // isaiah's local database
+            $hostname = "localhost";
+            $username = "root";
+            $password = "root";
+            $database = "form-demo"; 
 
-        <!-- Grid row -->
-        <div class="row">
+            // Create connection
+            $conn = mysqli_connect($hostname, $username, $password, $database);
 
-            <!-- Grid column -->
-            <div class="col-lg-5 col-xl-4">
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
 
-                <!-- Featured image -->
-                <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
-                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg" alt="Sample image">
-                    <a>
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
+            $sql = "SELECT * FROM posts ORDER BY id DESC;";
+            $result = $conn->query($sql);
 
-            </div>
-            <!-- Grid column -->
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo '<div class="row">'.
+                            '<div class="col-lg-5 col-xl-4">'.
+                                '<div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">'.
+                                '<img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg" alt="Sample image">'.
+                                    '<a><div class="mask rgba-white-slight"></div></a>'.
+                                '</div>'.
+                            '</div>'.
+                            '<div class="col-lg-7 col-xl-8">'.
+                                '<h3 class="font-weight-bold mb-3"><strong>'.$row["title"].'</strong></h3>'.
+                                '<p class="dark-grey-text">'.$row["body"].'</p>'.
+                                '<p>by <a class="font-weight-bold">'.$row["author"].'</a></p>'.
+                            '</div>'.
+                        '</div>'.
+                        '<hr class="my-5">';
+                }
+            } 
+            else { echo "0 results"; }
+            $conn->close();
 
-            <!-- Grid column -->
-            <div class="col-lg-7 col-xl-8">
-
-                <!-- Post title -->
-                <h3 class="font-weight-bold mb-3"><strong><?php echo ['title']; ?></strong></h3>
-                <!-- Excerpt -->
-                <p class="dark-grey-text"><?php echo ['body']; ?></p>
-                <!-- Post data -->
-                <p>by <a class="font-weight-bold"><?php echo ['author']; ?></a>, 19/04/2018</p>
-                <!-- Read more button -->
-                <a class="btn btn-primary btn-md">Read more</a>
-
-            </div>
-            <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-        <hr class="my-5">
+        ?>        
 
         <!-- Grid row -->
         <div class="row">
