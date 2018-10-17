@@ -11,15 +11,18 @@
 
 <?php
 
-//$hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
-//$username = "c6yha5d7xaec2saa";
-//$password = "mmz42r0bv1ukt52b";
-//$database = "ecdupp1z6rgjtuqa";
+$hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
+$username = "c6yha5d7xaec2saa";
+$password = "mmz42r0bv1ukt52b";
+$database = "ecdupp1z6rgjtuqa";
 
-$hostname = "localhost:8889";
-$username = "root";
-$password = "root";
-$database = "heroku";
+$conn = mysqli_connect($hostname, $username, $password, $database);
+
+//$user = 'root';
+//$password = 'root';
+//$db = 'blog';
+//$host = 'localhost';
+//$port = 8889;
 
 // isaiah's local database
 //$hostname = "localhost";
@@ -28,7 +31,7 @@ $database = "heroku";
 //$database = "form-demo";
 
 // Create connection
-$conn = mysqli_connect($hostname, $username, $password, $database);
+//$conn = mysqli_connect($user, $password, $db, $host, $port);
 
 // Check connection
 if ($conn->connect_error) {
