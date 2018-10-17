@@ -1,17 +1,15 @@
 <?php
 
-//$user = 'root';
-//$password = 'root';
-//$db = 'inventory';
-//$host = 'localhost';
-//$port = 8889;
+//jake's local database
+//$hostname = "localhost:8889";
+//$username = "root";
+//$password = "root";
+//$database = "blog";
 
 $hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
 $username = "c6yha5d7xaec2saa";
 $password = "mmz42r0bv1ukt52b";
 $database = "ecdupp1z6rgjtuqa";
-
-$conn = mysqli_connect($hostname, $username, $password, $database);
 
 //isaiah's local database
 //$hostname = "localhost";
@@ -19,7 +17,8 @@ $conn = mysqli_connect($hostname, $username, $password, $database);
 //$password = "root";
 //$database = "form-demo";
 
-//$conn = mysqli_connect($user, $password, $db, $host, $port);
+//establish db connect
+$conn = mysqli_connect($hostname, $username, $password, $database);
 
 // Check connection
 if ($conn->connect_error) {

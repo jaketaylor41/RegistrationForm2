@@ -19,8 +19,6 @@ $password = "mmz42r0bv1ukt52b";
 $database = "ecdupp1z6rgjtuqa";
 
 
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
 //declare database variables
 //isaiah's personal database
 //$hostname = "localhost";
@@ -29,14 +27,13 @@ $conn = mysqli_connect($hostname, $username, $password, $database);
 //$database = "form-demo";
 
 //jake's local database
-//$user = 'root';
-//$password = 'root';
-//$db = 'blog';
-//$host = 'localhost';
-//$port = 8889;
+//$hostname = "localhost:8889";
+//$username = "root";
+//$password = "root";
+//$database = "blog";
 
 //establish db connect
-//$conn = new mysqli($user, $password, $db, $host, $port);
+$conn = mysqli_connect($hostname, $username, $password, $database);
 
 //declare local variables from form submission
 $personEmail = $_POST['emailInput'];

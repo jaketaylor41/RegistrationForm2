@@ -16,13 +16,15 @@ $username = "c6yha5d7xaec2saa";
 $password = "mmz42r0bv1ukt52b";
 $database = "ecdupp1z6rgjtuqa";
 
-$conn = mysqli_connect($hostname, $username, $password, $database);
 
-//$user = 'root';
-//$password = 'root';
-//$db = 'blog';
-//$host = 'localhost';
-//$port = 8889;
+////jake's local database
+//$hostname = "localhost:8889";
+//$username = "root";
+//$password = "root";
+//$database = "blog";
+
+//establish db connect
+$conn = mysqli_connect($hostname, $username, $password, $database);
 
 // isaiah's local database
 //$hostname = "localhost";
@@ -49,7 +51,7 @@ $personPassword = $_POST['passwordInput'];
 $personConfirmPassword = $_POST['confirmPassword'];
 
 
-$sql_statement = "INSERT INTO `users` (`id`, `fName`, `lName`, `email`, `birthday`, `username`, `password`) VALUES (NULL, '$personName', '$personLname', '$personEmail', '$personBirthday', '$personUsername', '$personPassword')";
+$sql_statement = "INSERT INTO `users` (`id`, `fName`, `lName`, `email`, `confirmEmail`, `birthday`, `username`, `password`, `confirmPassword`) VALUES (NULL, '$personName', '$personLname', '$personEmail', '$personConfirmEmail', '$personBirthday', '$personUsername', '$personPassword', '$personConfirmPassword')";
 
 
 
