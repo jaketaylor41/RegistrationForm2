@@ -79,10 +79,10 @@
         
         <?php
             // isaiah's local database
-            $hostname = "localhost";
-            $username = "root";
-            $password = "root";
-            $database = "form-demo"; 
+        $hostname = "localhost:8889";
+        $username = "root";
+        $password = "root";
+        $database = "heroku";
 
             // Create connection
             $conn = mysqli_connect($hostname, $username, $password, $database);

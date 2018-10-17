@@ -1,15 +1,15 @@
 <?php
 
-/* $hostname = "localhost:8889";
+$hostname = "localhost:8889";
 $username = "root";
 $password = "root";
-$database = "heroku"; */
+$database = "heroku";
 
 //isaiah's local database
-$hostname = "localhost";
-$username = "root";
-$password = "root";
-$database = "form-demo";
+//$hostname = "localhost";
+//$username = "root";
+//$password = "root";
+//$database = "form-demo";
 
 $conn = mysqli_connect($hostname, $username, $password, $database);
 
@@ -23,7 +23,7 @@ $postTitle = $_POST['title'];
 $postBody = $_POST['body'];
 $authorName = $_POST['author'];
 
-$sql_statement = "INSERT INTO posts (id, title, body, author) VALUES ('', '$postTitle', '$postBody', '$authorName')";
+$sql_statement = "INSERT INTO posts (id, title, body, author) VALUES (NULL, '$postTitle', '$postBody', '$authorName')";
 
 
 if($conn->query($sql_statement) == TRUE){

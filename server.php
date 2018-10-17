@@ -16,16 +16,16 @@
 //$password = "mmz42r0bv1ukt52b";
 //$database = "ecdupp1z6rgjtuqa";
 
-/* $hostname = "localhost:8889";
+$hostname = "localhost:8889";
 $username = "root";
 $password = "root";
-$database = "heroku"; */
+$database = "heroku";
 
 // isaiah's local database
-$hostname = "localhost";
-$username = "root";
-$password = "root";
-$database = "form-demo"; 
+//$hostname = "localhost";
+//$username = "root";
+//$password = "root";
+//$database = "form-demo";
 
 // Create connection
 $conn = mysqli_connect($hostname, $username, $password, $database);
