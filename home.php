@@ -25,6 +25,18 @@
         p{
             width: 80%;
         }
+        .login-error {
+            background-color: #f1f1f1; 
+            box-shadow: 0 3px 5px rgba(0,0,0,0.25);
+            color: red; 
+            height: 24px; 
+            left: 0; 
+            top: 0;
+            position: fixed; 
+            right: 0; 
+            text-align: center; 
+            z-index: 1;
+        }
 
     </style>
 
@@ -111,6 +123,10 @@
                                 '<p>by <a class="font-weight-bold">'.$row["author"].'</a></p>'.
                             '</div>'.
                         '</div>'.
+                        '<form action="delete_post.php" method="post">'.
+                            '<input type="hidden" id="post_id" name="post_id" value="'.$row['id'].'">'.
+                            '<button>delete post</button>'.
+                        '</form>'.
                         '<hr class="my-5">';
                 }
             } 
@@ -118,84 +134,6 @@
             $conn->close();
 
         ?>        
-
-        <!-- Grid row -->
-        <div class="row">
-
-            <!-- Grid column -->
-            <div class="col-lg-5 col-xl-4">
-
-                <!-- Featured image -->
-                <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
-                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/31.jpg" alt="Sample image">
-                    <a>
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-lg-7 col-xl-8">
-
-                <!-- Post title -->
-                <h3 class="font-weight-bold mb-3"><strong>Title of the news</strong></h3>
-                <!-- Excerpt -->
-                <p class="dark-grey-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident et accusamus iusto odio dignissimos et dolorum fuga.</p>
-                <!-- Post data -->
-                <p>by <a class="font-weight-bold">Jessica Clark</a>, 16/04/2018</p>
-                <!-- Read more button -->
-                <a class="btn btn-primary btn-md">Read more</a>
-
-            </div>
-            <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-        <hr class="my-5">
-
-        <!-- Grid row -->
-        <div class="row">
-
-            <!-- Grid column -->
-            <div class="col-lg-5 col-xl-4">
-
-                <!-- Featured image -->
-                <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
-                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/52.jpg" alt="Sample image">
-                    <a>
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-lg-7 col-xl-8">
-
-                <!-- Post title -->
-                <h3 class="font-weight-bold mb-3"><strong></strong></h3>
-                <!-- Excerpt -->
-                <p class="dark-grey-text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, psam voluptatem quia consectetur.</p>
-                <!-- Post data -->
-                <p>by <a class="font-weight-bold">Jessica Clark</a>, 12/04/2018</p>
-                <!-- Read more button -->
-                <a class="btn btn-primary btn-md">Read more</a>
-
-            </div>
-            <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-    </section>
-    <!-- Section: Blog v.3 -->
-
-
-
 </body>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/js/mdb.min.js"></script>

@@ -27,7 +27,6 @@ $sql_statement = "INSERT INTO posts (id, title, body, author) VALUES ('', '$post
 
 
 if($conn->query($sql_statement) == TRUE){
-    echo 'test';
     include "home.php";
     header("Location: home.php");
 
