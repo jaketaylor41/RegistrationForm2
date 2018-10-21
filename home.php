@@ -69,7 +69,7 @@
                     </div>
 
                     <!-- Send button -->
-                    <button name="submitPost" class="btn btn-info btn-block" type="submit">Post</button>
+                    <button name="submitPost" class="btn btn-info btn-block" type="submit">Submit</button>
 
                 </form>
                 <!-- Default form contact -->
@@ -91,10 +91,17 @@
         
         <?php
             // isaiah's local database
-            $hostname = "localhost";
-            $username = "root";
-            $password = "root";
-            $database = "form-demo"; 
+//        $hostname = "localhost:8889";
+//        $username = "root";
+//        $password = "root";
+//        $database = "blog";
+
+        //heroku db
+        $hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
+        $username = "c6yha5d7xaec2saa";
+        $password = "mmz42r0bv1ukt52b";
+        $database = "ecdupp1z6rgjtuqa";
+
 
             // Create connection
             $conn = mysqli_connect($hostname, $username, $password, $database);

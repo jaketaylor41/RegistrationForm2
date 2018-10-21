@@ -11,24 +11,29 @@
 
 <?php
 
-//$hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
-//$username = "c6yha5d7xaec2saa";
-//$password = "mmz42r0bv1ukt52b";
-//$database = "ecdupp1z6rgjtuqa";
+$hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
+$username = "c6yha5d7xaec2saa";
+$password = "mmz42r0bv1ukt52b";
+$database = "ecdupp1z6rgjtuqa";
 
-/* $hostname = "localhost:8889";
-$username = "root";
-$password = "root";
-$database = "heroku"; */
+
+////jake's local database
+//$hostname = "localhost:8889";
+//$username = "root";
+//$password = "root";
+//$database = "blog";
+
+//establish db connect
+$conn = mysqli_connect($hostname, $username, $password, $database);
 
 // isaiah's local database
-$hostname = "localhost";
-$username = "root";
-$password = "root";
-$database = "form-demo"; 
+//$hostname = "localhost";
+//$username = "root";
+//$password = "root";
+//$database = "form-demo";
 
 // Create connection
-$conn = mysqli_connect($hostname, $username, $password, $database);
+//$conn = mysqli_connect($user, $password, $db, $host, $port);
 
 // Check connection
 if ($conn->connect_error) {
@@ -46,7 +51,7 @@ $personPassword = $_POST['passwordInput'];
 $personConfirmPassword = $_POST['confirmPassword'];
 
 
-$sql_statement = "INSERT INTO `users` (`id`, `fName`, `lName`, `email`, `birthday`, `username`, `password`) VALUES (NULL, '$personName', '$personLname', '$personEmail', '$personBirthday', '$personUsername', '$personPassword')";
+$sql_statement = "INSERT INTO `users` (`id`, `fName`, `lName`, `email`, `confirmEmail`, `birthday`, `username`, `password`, `confirmPassword`) VALUES (NULL, '$personName', '$personLname', '$personEmail', '$personConfirmEmail', '$personBirthday', '$personUsername', '$personPassword', '$personConfirmPassword')";
 
 
 

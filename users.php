@@ -13,26 +13,27 @@
 
 <?php
 
-//$hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
-//$username = "c6yha5d7xaec2saa";
-//$password = "mmz42r0bv1ukt52b";
-//$database = "ecdupp1z6rgjtuqa";
+$hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
+$username = "c6yha5d7xaec2saa";
+$password = "mmz42r0bv1ukt52b";
+$database = "ecdupp1z6rgjtuqa";
+
 
 //declare database variables
 //isaiah's personal database
-$hostname = "localhost";
-$username = "root";
-$password = "root";
-$database = "form-demo";
+//$hostname = "localhost";
+//$username = "root";
+//$password = "root";
+//$database = "form-demo";
 
 //jake's local database
-/* $hostname = "localhost";
-$username = "root";
-$password = "root";
-$database = "heroku"; */
+//$hostname = "localhost:8889";
+//$username = "root";
+//$password = "root";
+//$database = "blog";
 
 //establish db connect
-$conn = new mysqli($hostname, $username, $password, $database);
+$conn = mysqli_connect($hostname, $username, $password, $database);
 
 //declare local variables from form submission
 $personEmail = $_POST['emailInput'];
