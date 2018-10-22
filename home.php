@@ -131,7 +131,7 @@
                             '</div>'.
                         '</div>'.
                         '<form action="delete_post.php" method="post">'.
-                            '<input type="hidden" id="post_id" name="post_id" value="'.$row['id'].'">'.
+                            '<input type="submit" id="post_id" name="post_id" value="'.$row['id'].'">'.
                             '<button>delete post</button>'.
                         '</form>'.
                         '<hr class="my-5">';
