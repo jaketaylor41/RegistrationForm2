@@ -1,5 +1,4 @@
 <?php
-
 //isaiah's local database
 //$hostname = "localhost";
 //$username = "root";
@@ -43,6 +42,8 @@
 //        include("home.php");
 //    }
 //}
+
+session_start();
 
 
 $servername = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
