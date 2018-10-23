@@ -10,6 +10,7 @@ $hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
 $username = "c6yha5d7xaec2saa";
 $password = "mmz42r0bv1ukt52b";
 $database = "ecdupp1z6rgjtuqa";
+$cookie_name = "user";
 
 $conn = mysqli_connect($hostname, $username, $password, $database);
 
@@ -24,10 +25,11 @@ $post_id = $_POST['post_id'];
 // delete post if user cookie is set
 if(!isset($_COOKIE['user'])) {
     echo '<div class="login-error">insufficient permissions</div>';
+    echo "Cookie named '" . $cookie_name . "' is not set!";
     include("home.php");
 }
 else {
-    $sql = "SELECT role FROM users WHERE email = '".$_COOKIE['user']."'";
+    $sql = "SELECT role FROM users WHERE email = '".$_COOKIE[$cookie_name]."'";
     $result = $conn->query($sql);
     $role = "";
     
