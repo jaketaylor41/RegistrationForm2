@@ -50,7 +50,6 @@ $username = "c6yha5d7xaec2saa";
 $password = "mmz42r0bv1ukt52b";
 $dbname = "ecdupp1z6rgjtuqa";
 $post_id = $_POST['post_id'];
-$role = "";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -60,18 +59,20 @@ if (!$conn) {
 }
 
 
-if ($result->num_rows > 0) $role = $result->fetch_assoc()['role'];
-if ($role == 'administrator') {
+if ($result->num_rows > 0) {
+    $role = $result->fetch_assoc()['role'];
+    if ($role == 'administrator') {
 // sql to delete a record
-    $sql = "DELETE FROM posts WHERE id=" . $post_id;
+        $sql = "DELETE FROM posts WHERE id=" . $post_id;
 
-    if (mysqli_query($conn, $sql)) {
-        echo "Record deleted successfully";
-        header("Location: home.php");
-    } else {
-        echo "Error deleting record: " . mysqli_error($conn);
+        if (mysqli_query($conn, $sql)) {
+            echo "Record deleted successfully";
+            header("Location: home.php");
+        } else {
+            echo "Error deleting record: " . mysqli_error($conn);
+        }
+
+        mysqli_close($conn);
     }
-
-    mysqli_close($conn);
 }
 
