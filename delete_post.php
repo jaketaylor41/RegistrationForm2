@@ -23,7 +23,7 @@ if ($conn->connect_error) {
 $post_id = $_POST['post_id'];
 
 // delete post if user cookie is set
-if(!isset($_COOKIE['user'])) {
+if(!isset($_COOKIE[$cookie_name])) {
     echo '<div class="login-error">insufficient permissions</div>';
     echo "Cookie named '" . $cookie_name . "' is not set!";
     include("home.php");
