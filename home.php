@@ -140,7 +140,8 @@
             else { echo "0 results"; }
             $conn->close();
 
-        ?>        
+        ?>
+    </section>
 </body>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/js/mdb.min.js"></script>
