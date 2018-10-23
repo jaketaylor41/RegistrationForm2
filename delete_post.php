@@ -60,7 +60,7 @@ if (!$conn) {
 }
 
 
-
+if ($result->num_rows > 0) $role = $result->fetch_assoc()['role'];
 if ($role == 'administrator') {
 // sql to delete a record
     $sql = "DELETE FROM posts WHERE id=" . $post_id;
@@ -73,6 +73,5 @@ if ($role == 'administrator') {
     }
 
     mysqli_close($conn);
-}else{
-    echo "ERROR: Not Registered As Admin";
 }
+
