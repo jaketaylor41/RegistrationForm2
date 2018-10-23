@@ -63,6 +63,7 @@ $sql = "DELETE FROM posts WHERE id=".$post_id;
 
 if (mysqli_query($conn, $sql)) {
     echo "Record deleted successfully";
+    header("Location: home.php");
 } else {
     echo "Error deleting record: " . mysqli_error($conn);
 }
