@@ -57,7 +57,7 @@
 
                 <!-- E-mail -->
                 <div class="md-form mt-0">
-                    <input type="email" name="emailInput" class="form-control" placeholder="E-mail">
+                    <input type="email" name="emailInput"class="form-control" placeholder="E-mail">
                 </div>
 
                 <!-- Password -->

@@ -48,31 +48,21 @@ if ($conn->connect_errno) {
     exit();
 }
 
-if($result = $conn->query($sql_statement) == TRUE){
-    include "home.php";
-    header("Location: home.php");
-}
-else {
-    echo "Error " . $sql_statement . "<br>" . $conn->error;
-}
-
-$conn->close();
-
 //declare results and check if null
-//if ($result = $conn->query($sql_statement)) {
-//    //update header if a match is greater than zero
-//    if ($result->num_rows > 0){
-//        //BAD SECURITY SOLUTION, BUT EASY POINTS
-//        setcookie("user", $personEmail, time() + (86400 * 30), "/"); // 86400 = 1 day
-//        header("Location: home.php");
-//    }
-//    else {
-//        echo '<div class="login-error">incorrect login</div>';
-//        include("index.php");
-//        //header("Location: index.php");
-//    }
-//    die();
-//}
-//
-////close db connect
-//$conn->close();
+if ($result = $conn->query($sql_statement)) {
+    //update header if a match is greater than zero
+    if ($result->num_rows > 0){
+        //BAD SECURITY SOLUTION, BUT EASY POINTS
+        setcookie("user", $personEmail, time() + (86400 * 30), "/"); // 86400 = 1 day
+        header("Location: home.php");
+    }
+    else {
+        echo '<div class="login-error">incorrect login</div>';
+        include("index.php");
+        //header("Location: index.php");
+    }
+    die();
+}
+
+//close db connect
+$conn->close();

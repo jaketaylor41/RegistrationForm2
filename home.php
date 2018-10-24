@@ -130,7 +130,7 @@
                         '</div>'.
                         '<form action="delete_post.php" method="post">'.
                             '<input type="hidden" id="post_id" name="post_id" value="'.$row['id'].'">'.
-                            '<button class="btn btn-primary">delete post</button>'.
+                            '<button>delete post</button>'.
                         '</form>'.
                         '<hr class="my-5">';
                 }
