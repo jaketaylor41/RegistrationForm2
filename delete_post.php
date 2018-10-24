@@ -1,34 +1,30 @@
 <?php
 //isaiah's local database
-//$servername = "localhost";
+//$hostname = "localhost";
 //$username = "root";
 //$password = "root";
-//$dbname = "blog";
-//
+//$database = "form-demo";
+
 $hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
 $username = "c6yha5d7xaec2saa";
 $password = "mmz42r0bv1ukt52b";
 $database = "ecdupp1z6rgjtuqa";
-$cookie_name = '';
+
 
 $conn = mysqli_connect($hostname, $username, $password, $database);
-
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
 // declare variables from form
 $post_id = $_POST['post_id'];
-
 // delete post if user cookie is set
-if(!isset($_COOKIE[$cookie_name])) {
+if(!isset($_COOKIE['user'])) {
     echo '<div class="login-error">insufficient permissions</div>';
-    echo "Cookie named '" . $cookie_name . "' is not set!";
     include("home.php");
 }
 else {
-    $sql = "SELECT role FROM users WHERE email = '".$_COOKIE[$cookie_name]."'";
+    $sql = "SELECT role FROM users WHERE email = '".$_COOKIE['user']."'";
     $result = $conn->query($sql);
     $role = "";
 
@@ -42,33 +38,3 @@ else {
         include("home.php");
     }
 }
-
-//
-//$servername = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
-//$username = "c6yha5d7xaec2saa";
-//$password = "mmz42r0bv1ukt52b";
-//$dbname = "ecdupp1z6rgjtuqa";
-//$post_id = $_POST['post_id'];
-//$role = "";
-//
-//// Create connection
-//$conn = mysqli_connect($servername, $username, $password, $dbname);
-//// Check connection
-//if (!$conn) {
-//    die("Connection failed: " . mysqli_connect_error());
-//}
-//
-//
-//
-//// sql to delete a record
-//    $sql = "DELETE FROM posts WHERE id=" . $post_id;
-//
-//    if (mysqli_query($conn, $sql)) {
-//        echo "Record deleted successfully";
-//        header("Location: home.php");
-//    } else {
-//        echo "Error deleting record: " . mysqli_error($conn);
-//    }
-
-    mysqli_close($conn);
-
