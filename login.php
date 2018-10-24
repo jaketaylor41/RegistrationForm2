@@ -53,11 +53,11 @@
         <div class="card-body px-lg-5 pt-0">
 
             <!-- Form -->
-            <form class="text-center" style="color: #757575;" action="users.php" method="post">
+            <form class="text-center" style="color: #757575;" action="home.php" method="post">
 
                 <!-- E-mail -->
                 <div class="md-form mt-0">
-                    <input type="email" name="emailInput"class="form-control" placeholder="E-mail">
+                    <input type="email" name="emailInput" class="form-control" placeholder="E-mail">
                 </div>
 
                 <!-- Password -->
