@@ -18,10 +18,10 @@ $database = "ecdupp1z6rgjtuqa";
 
 
 ////jake's local database
-//$hostname = "localhost:8889";
-//$username = "root";
-//$password = "root";
-//$database = "blog";
+$hostname = "localhost:8889";
+$username = "root";
+$password = "root";
+$database = "blog";
 
 //establish db connect
 $conn = mysqli_connect($hostname, $username, $password, $database);

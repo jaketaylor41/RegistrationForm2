@@ -89,10 +89,10 @@
         <!-- Section description -->
         <?php
             // isaiah's local database
-//        $hostname = "localhost:8889";
-//        $username = "root";
-//        $password = "root";
-//        $database = "blog";
+        $hostname = "localhost:8889";
+        $username = "root";
+        $password = "root";
+        $database = "blog";
 
         //heroku db
         $hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
@@ -130,7 +130,7 @@
                         '</div>'.
                         '<form action="delete_post.php" method="post">'.
                             '<input type="hidden" id="post_id" name="post_id" value="'.$row['id'].'">'.
-                            '<button>delete post</button>'.
+                            '<button class="btn btn-primary">delete post</button>'.
                         '</form>'.
                         '<hr class="my-5">';
                 }

@@ -1,9 +1,9 @@
 <?php
 //isaiah's local database
-//$hostname = "localhost";
-//$username = "root";
-//$password = "root";
-//$database = "form-demo";
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "blog";
 //
 //$hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
 //$username = "c6yha5d7xaec2saa";
@@ -42,8 +42,6 @@
 //        include("home.php");
 //    }
 //}
-
-session_start();
 
 
 $servername = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
