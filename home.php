@@ -89,10 +89,10 @@
         <!-- Section description -->
         <?php
             // isaiah's local database
-        $hostname = "localhost:8889";
-        $username = "root";
-        $password = "root";
-        $database = "blog";
+//        $hostname = "localhost:8889";
+//        $username = "root";
+//        $password = "root";
+//        $database = "blog";
 
         //heroku db
         $hostname = "bbj31ma8tye2kagi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
